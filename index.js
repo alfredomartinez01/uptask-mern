@@ -6,6 +6,8 @@ const app = express();
 dotenv.config();
 conectarDB(); // Conectar a la base de datos
 
-app.listen(4000, () => {
+const PORT = process.env.PORT || 4000; // Todos los servidores crean esa variable de entorno por defecto
+
+app.listen(PORT, () => {
     console.log('Servidor funcionando');
 });
